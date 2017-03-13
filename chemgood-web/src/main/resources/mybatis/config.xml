@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 设置别名 -->
+    <typeAliases>
+        <!-- type指的是javabean的完全限定名   alias就是指代别名-->
+        <typeAlias alias="ProductDO" type="com.chemgood.bean.ProductDO"/>
+    </typeAliases>
+</configuration>

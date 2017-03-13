@@ -1,0 +1,8 @@
+#if($message)
+	$message
+#end
+#if($result)
+	"result isOK" : $result.isOK()<br />
+	"result Message" : $result.getMessage()<br />
+	"result obj" : $result.getObj()<br />
+#end

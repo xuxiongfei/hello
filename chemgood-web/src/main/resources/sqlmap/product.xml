@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace的值就是dao接口的完整路劲，就这个demo而言namespace 就是userDao.java的完整路劲 -->
+<mapper namespace="com.chemgood.dao.ProductDAO">
+    <!-- 这里的id就是接口中方法的名称 -->
+    <select id="queryProductNameById" parameterType="java.lang.Long" resultType="ProductDO">
+        SELECT
+          id as id,
+          name as name
+        FROM product
+        WHERE id = #{id}
+    </select>
+</mapper>

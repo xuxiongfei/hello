@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<root>
+		<level value="WARN" />
+		<appender-ref ref="chemgood" />
+	</root>
+	<logger name="chemgood" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="chemgood" />
+	</logger>
+	<logger name="com.chemgood.service" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="chemgood-service" />
+	</logger>
+	<logger name="com.chemgood.bo" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="chemgood-bo" />
+	</logger>
+	<logger name="com.chemgood.dao" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="chemgood-dao" />
+	</logger>
+	<logger name="com.chemgood.web" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="chemgood-web" />
+	</logger>
+	<logger name="alarm-message" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="alarm-message" />
+	</logger>
+	<logger name="monitor" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="monitor" />
+	</logger>
+	<logger name="chemgood-aop" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="chemgood-aop" />
+	</logger>
+
+	<appender name="chemgood" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${log.dir}/chemgood.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{requestURIWithQueryString}] %-5p %c{2} - %m%n" />
+		</layout>
+	</appender>
+	<appender name="chemgood-service" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${log.dir}/chemgood-service.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p- %m%n" />
+		</layout>
+	</appender>
+	<appender name="chemgood-bo" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${log.dir}/chemgood-bo.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p- %m%n" />
+		</layout>
+	</appender>
+	<appender name="chemgood-dao" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${log.dir}/chemgood-dao.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p- %m%n" />
+		</layout>
+	</appender>
+	<appender name="chemgood-web" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${log.dir}/chemgood-web.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p- %m%n" />
+		</layout>
+	</appender>
+	<appender name="alarm-message" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${log.dir}/alarm-message.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p- %m%n" />
+		</layout>
+	</appender>
+	<appender name="monitor" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${log.dir}/monitor.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p- %m%n" />
+		</layout>
+	</appender>
+	<appender name="chemgood-aop" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${log.dir}/chemgood-aop.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%X{requestURIWithQueryString}] %-5p %c{2} - %m%n" />
+		</layout>
+	</appender>
+
+</log4j:configuration>
